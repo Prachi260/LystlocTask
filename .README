@@ -1,0 +1,43 @@
+## Task Description: Implementing a User Management API with MySQL Integration
+
+### Objective:
+Create a Node.js API using Express that provides a list of users with pagination, search functionality based on user name, and filtering by user group. Additionally, insert 10,000 sample user records into a MySQL database.
+
+### Requirements:
+1. **MySQL Database Setup:**
+- Set up a MySQL database to store user records. Create a table named `users` with columns such as `id`, `name`, and `group`.
+2. **Insert 10,000 Users:**
+- Write a script to insert 10,000 sample user records into the `users` table.
+3. **Endpoint for User List Retrieval:**
+- Create an endpoint to retrieve a list of users.
+- Support pagination with 50 records per page.
+- Allow users to specify the page number as a query parameter (e.g., `/api/users?page=1`).
+4. **Search Functionality:**
+- Implement search functionality based on the user's name.
+- Allow users to specify a search term as a query parameter (e.g., `/api/users?search=John`).
+5. **Filtering by User Group:**
+- Allow users to filter the user list by specifying a user group as a query parameter (e.g., `/api/users?group=Admin`).
+- If no group is specified, return users from all groups.
+
+### Implementation Details:
+1. **MySQL Database Connection:**
+- Use a MySQL library (e.g., `mysql2`) to establish a connection to the MySQL database.
+2. **Insertion Script:**
+- Write a script to insert 10,000 sample user records into the `users` table. You can use random data or any method of your choice for generating sample names and groups.
+3. **API Implementation:**
+- Modify the API endpoints to fetch user data from the MySQL database.
+- Utilize SQL queries to handle pagination, search, and filtering.
+
+### Example Usage:
+- Retrieve the first page of users:
+```
+GET /api/users?page=1
+```
+- Search for users with the name "John":
+```
+GET /api/users?search=John
+```
+- Filter users by the "Admin" group:
+```
+GET /api/users?group=Admin
+```
